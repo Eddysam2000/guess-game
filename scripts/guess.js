@@ -27,7 +27,7 @@ const playCorrectSound = function() {
 };
 
 // Function to play the wrong sound
-const playWrongSound = function() {
+const playFailSound = function() {
   failSound.play();
 };
 
@@ -92,7 +92,7 @@ const playGame = function(){
 
 // Conditional
 if (guess.value == null || guess.value < 1 || guess.value > 5 || guess.value == ""){
-    playWrongSound()
+    playFailSound()
     warning.style.display = "block";
     warning.innerHTML = "please enter a number between 1-5";
     setTimeout(()=> warning.style.display = "none", 3000);
